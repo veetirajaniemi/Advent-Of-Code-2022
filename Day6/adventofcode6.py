@@ -1,4 +1,4 @@
-def main():
+def findindex(length):
     input = open("input6.txt", "r")
     line = input.readline()
     str = list(line[:-1])
@@ -14,11 +14,12 @@ def main():
 
         chars.append(str[index]) # not duplicates, can add
         
-        if (len(chars) == 14):
-            print(f"LÖYTYI, {index+1}")
+        if (len(chars) == length):
+            print(f"Index found: {index+1}")
             return
 
         index += 1
 
 
-main()
+findindex(4)
+findindex(14)
